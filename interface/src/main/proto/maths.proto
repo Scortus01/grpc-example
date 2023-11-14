@@ -1,0 +1,18 @@
+syntax = "proto3";
+package co.edu.udem.isv.maths;
+
+service MathService {
+  rpc Sumar(Operands) returns (Result);
+  rpc Restar(Operands) returns (Result);
+  rpc Multiplicar(Operands) returns (Result);
+  rpc Dividir(Operands) returns (Result);
+}
+
+message Operands {
+  double operand1 = 1;
+  double operand2 = 2;
+}
+
+message Result {
+  double value = 1;
+}
